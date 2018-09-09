@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_width="220sp"
+        android:layout_height="170sp"
+        android:background="@drawable/applogo"/>
+
+    <TextView
+        android:id="@+id/mainExplanText"
+        android:gravity="center|top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:textColor="#FFFFFF"
+        android:text="당신의 아름다운 표현을 도와드립니다"/>
+
+    <Button
+        android:id="@+id/mainBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="시작하기"
+        android:textSize="25sp"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
+        android:background="@drawable/bg_main_btn"
+        />
+
+</LinearLayout>

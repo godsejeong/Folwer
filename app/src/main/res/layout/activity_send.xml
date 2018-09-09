@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:id="@+id/sendlayout"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/bugo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:gravity="center"
+        android:text="부고알림"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:gravity="top|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/send1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:text="홍길동"
+                android:textSize="25sp"
+                android:letterSpacing="0.5"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:text="님의"
+                android:textColor="#FFF"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/send2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:text="부친상"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sendhanja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:text="故"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/send3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:text="아무개"
+                android:letterSpacing="0.5"
+                android:textColor="#fff"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:text="님께서"
+                android:textColor="#FFF"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/send4"
+                android:layout_width="115dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:text="1일 오전"
+                android:textColor="#fff"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:text="별세하셨습니다"
+                android:textColor="#FFF"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/send1_"
+                android:layout_width="80dp"
+                android:layout_marginLeft="14dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="상주"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/send5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:layout_marginRight="14dp"
+                android:hint="성함을 입력해주세요"
+                android:letterSpacing="0.2"
+                android:textColor="#f95b5b"
+                android:textColorHint="#a7a7a7"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/send2_"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="발인"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/send6"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:layout_marginRight="14dp"
+                android:hint="발인 날짜를 선택해 주세요"
+                android:letterSpacing="0.2"
+                android:textColor="#f95b5b"
+                android:textColorHint="#a7a7a7"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/send3_"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="빈소"
+                android:layout_marginLeft="14dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/send7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:hint="장례식장 위치를 선택해 주세요"
+                android:letterSpacing="0.2"
+                android:textColor="#f95b5b"
+                android:textColorHint="#a7a7a7"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/send4_"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:layout_marginLeft="14dp"
+                android:text="계좌"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:id="@+id/send5_"
+                android:text="은행"
+                android:gravity="center"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_main_btn"
+                android:layout_width="46dp"
+                android:layout_height="30dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/send8"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/bg_main_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:hint="계좌번호를 입력해주세요"
+                android:letterSpacing="0.2"
+                android:layout_marginRight="14dp"
+                android:textColor="#f95b5b"
+                android:textColorHint="#a7a7a7"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/sendment"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:text="문구를 선택해 주세요"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>
