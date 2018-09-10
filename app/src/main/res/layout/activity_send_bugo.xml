@@ -40,12 +40,12 @@
                 android:id="@+id/bugo1"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="#00000000"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:hint="홍길동"
                 android:letterSpacing="0.5"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#f95b5b" />
 
             <TextView
@@ -62,11 +62,11 @@
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="#00000000"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:hint="부친상"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#f95b5b" />
 
         </LinearLayout>
@@ -93,12 +93,12 @@
                 android:layout_width="115dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="#00000000"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:hint="아무개"
                 android:letterSpacing="0.5"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#f95b5b" />
 
             <TextView
@@ -121,14 +121,14 @@
 
             <EditText
                 android:id="@+id/bugo4"
-                android:layout_width="115dp"
+                android:layout_width="180dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="#00000000"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:hint="1일 오전"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#f95b5b" />
 
             <TextView
@@ -184,7 +184,7 @@
                 android:layout_marginRight="14dp"
                 android:hint="성함을 입력해주세요"
                 android:letterSpacing="0.2"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#a7a7a7"
                 android:textSize="15sp" />
 
@@ -209,7 +209,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
 
-            <TextView
+            <EditText
                 android:id="@+id/bugo6_"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -220,7 +220,7 @@
                 android:layout_marginRight="14dp"
                 android:hint="발인 날짜를 선택해 주세요"
                 android:letterSpacing="0.2"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#a7a7a7"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -256,7 +256,7 @@
                 android:gravity="center"
                 android:hint="장례식장 위치를 선택해 주세요"
                 android:letterSpacing="0.2"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#a7a7a7"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -304,7 +304,7 @@
                 android:hint="계좌번호를 입력해주세요"
                 android:letterSpacing="0.2"
                 android:layout_marginRight="14dp"
-                android:textColor="#f95b5b"
+                android:textColor="#fff"
                 android:textColorHint="#a7a7a7"
                 android:textSize="15sp" />
         </LinearLayout>

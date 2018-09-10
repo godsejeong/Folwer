@@ -18,8 +18,6 @@ import android.widget.Toast
 import com.google.android.gms.maps.GoogleMap
 
 
-
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,16 +29,16 @@ class MainActivity : AppCompatActivity() {
         mainBtn.setShadowLayer(50F, 0F, 0F, Color.WHITE)
 
         mainBtn.setOnClickListener {
-            var intent = Intent(this,SendBugoActivity::class.java)
+            var intent = Intent(this, SendBugoActivity::class.java)
             startActivity(intent)
             finish()
         }
     }
 
-//    READ_CONTACTS
+    //    READ_CONTACTS
     private fun setPermission() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
-            ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_DENIED||
+                ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_DENIED ||
                 ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_DENIED ||
                 ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
             ActivityCompat.requestPermissions(this,
@@ -48,20 +46,17 @@ class MainActivity : AppCompatActivity() {
                             Manifest.permission.ACCESS_COARSE_LOCATION,
                             Manifest.permission.READ_CONTACTS,
                             Manifest.permission.SEND_SMS,
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE),1)
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
             return
         }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
-        if (requestCode == 0) {
-            if (grantResults[0] == 0) {
-
-            } else {
-                Toast.makeText(this, "권한이 거절 되었습니다. 앱을 이용하려면 권한을 승낙하여야 합니다.", Toast.LENGTH_SHORT).show()
-                finish()
-            }
+        if (requestCode == 1) {
+        } else {
+            Toast.makeText(this, "권한이 거절 되었습니다. 앱을 이용하려면 권한을 승낙하여야 합니다.", Toast.LENGTH_SHORT).show()
+            finish()
         }
     }
 

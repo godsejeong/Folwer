@@ -26,9 +26,8 @@ import android.graphics.*
 import android.os.Build
 import android.provider.Telephony
 import android.support.annotation.RequiresApi
+import android.support.v4.content.ContextCompat
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_send.*
-
 
 class SendBugoActivity : AppCompatActivity() {
     var data1: String? = null
@@ -45,11 +44,14 @@ class SendBugoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send_bugo)
         bugobtn.visibility = View.VISIBLE
+
+//        var drawable = ContextCompat.getDrawable(this, R.drawable.bg_main_btn)
+//        bugo1.setBackgroundDrawable(drawable)
+//        bugo2.setBackgroundDrawable(drawable)
+//        bugo3.setBackgroundDrawable(drawable)
+//        bugo4.setBackgroundDrawable(drawable)
+
         bugoNoti.setShadowLayer(50F, 0F, 0F, Color.WHITE)
-        bugo1.setShadowLayer(50F, 0F, 0F, Color.WHITE)
-        bugo2.setShadowLayer(50F, 0F, 0F, Color.WHITE)
-        bugo3.setShadowLayer(50F, 0F, 0F, Color.WHITE)
-        bugo4.setShadowLayer(50F, 0F, 0F, Color.WHITE)
         bugo5.setShadowLayer(50F, 0F, 0F, Color.WHITE)
         bugo6.setShadowLayer(50F, 0F, 0F, Color.WHITE)
         bugo7.setShadowLayer(50F, 0F, 0F, Color.WHITE)
@@ -81,14 +83,10 @@ class SendBugoActivity : AppCompatActivity() {
                 Toast.makeText(this,"문구를 선택하지 않았습니다. 문구를 선택해 주세요",Toast.LENGTH_SHORT).show()
             }
 
-            if(!isNumeric(data8!!)){
-                Toast.makeText(this,"계좌번호를'-'없이 바르게 입력해 주세요",Toast.LENGTH_SHORT).show()
-            }
 
             if(data1!!.isNotEmpty() && data2!!.isNotEmpty() && data3!!.isNotEmpty()
                 && data4!!.isNotEmpty() && data5!!.isNotEmpty() && data6!!.isNotEmpty()
-                && data7!!.isNotEmpty() && data8!!.isNotEmpty() && isNumeric(data8!!)
-            && datament != "문구를 선택해 주세요"){
+                && data7!!.isNotEmpty() && data8!!.isNotEmpty() && datament != "문구를 선택해 주세요"){
 
             startActivityForResult(Intent(this, PhoneActivity::class.java), 10)
 
@@ -97,19 +95,6 @@ class SendBugoActivity : AppCompatActivity() {
             }
         }
 
-        bugo6_.setOnClickListener {
-            var date = Date()
-            var year = SimpleDateFormat("yyyy").format(date)
-            var month = SimpleDateFormat("MM").format(date)
-            var d = SimpleDateFormat("dd").format(date)
-
-            Log.e("year", (Integer.parseInt(year)).toString())
-            Log.e("d", (Integer.parseInt(month)).toString())
-            Log.e("month", (Integer.parseInt(d)).toString())
-            val dialog = DatePickerDialog(this@SendBugoActivity, listener(),
-                    Integer.parseInt(year), Integer.parseInt(month) - 1, Integer.parseInt(d))
-            dialog.show()
-        }
 
         bugo7_.setOnClickListener {
             var intent = Intent(this, LocationActivity::class.java)
@@ -119,16 +104,6 @@ class SendBugoActivity : AppCompatActivity() {
             var intent = Intent(this, BankActivity::class.java)
             startActivityForResult(intent, 100)
         }
-    }
-
-    fun isNumeric(s: String): Boolean {
-        try {
-            java.lang.Integer.parseInt(s)
-            return true
-        } catch (e: NumberFormatException) {
-            return false
-        }
-
     }
 
     var phonelist = ArrayList<String>()
@@ -148,21 +123,13 @@ class SendBugoActivity : AppCompatActivity() {
             }
 
             if (requestCode == 10) {
+                bugobtn.visibility = View.INVISIBLE
                 phonelist = data!!.getStringArrayListExtra("list")
-//                var intent = Intent(this,SendActivity::class.java)
-//                intent.putExtra("data1",data1)
-//                intent.putExtra("data2",data2)
-//                intent.putExtra("data3",data3)
-//                intent.putExtra("data4",data4)
-//                intent.putExtra("data5",data5)
-//                intent.putExtra("data6",data6)
-//                intent.putExtra("data7",data7)
-//                intent.putExtra("data8",data8)
-//                intent.putExtra("data9",data9)
-//                intent.putExtra("datalist",phonelist)
-//                intent.putExtra("datament",datament)
-//                startActivity(intent)
-//                finish()
+                bugo1.setBackgroundColor(Color.parseColor("#00000000"))
+                bugo2.setBackgroundColor(Color.parseColor("#00000000"))
+                bugo3.setBackgroundColor(Color.parseColor("#00000000"))
+                bugo4.setBackgroundColor(Color.parseColor("#00000000"))
+
                 sendMessage()
             }
 
@@ -178,7 +145,7 @@ class SendBugoActivity : AppCompatActivity() {
             var data = phonelist[i]
 
             val intent = Intent(Intent.ACTION_SEND)
-            intent.putExtra("sms_body", "http://xn--ig2brfw80b5lbd59a.kr/")
+            intent.putExtra("sms_body", "http://xn--ig2brfw80b5lbd59a.kr/\n근조화환 주문하기")
             intent.putExtra("address", data)
             intent.setPackage(Telephony.Sms.getDefaultSmsPackage(this))
             intent.type = "vnd.android-dir/mms-sms"
@@ -214,11 +181,6 @@ class SendBugoActivity : AppCompatActivity() {
 
 
 
-        fun listener(): DatePickerDialog.OnDateSetListener = object : DatePickerDialog.OnDateSetListener {
-            override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
-                bugo6_.text = (p1).toString() + "년 " + (p2 + 1).toString() + "월 " + p3.toString() + "일"
-            }
-        }
     }
 
 
