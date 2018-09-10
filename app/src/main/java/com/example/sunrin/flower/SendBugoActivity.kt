@@ -44,7 +44,6 @@ class SendBugoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send_bugo)
         bugobtn.visibility = View.VISIBLE
-
 //        var drawable = ContextCompat.getDrawable(this, R.drawable.bg_main_btn)
 //        bugo1.setBackgroundDrawable(drawable)
 //        bugo2.setBackgroundDrawable(drawable)
