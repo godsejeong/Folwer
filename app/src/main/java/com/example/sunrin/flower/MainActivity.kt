@@ -14,8 +14,10 @@ import android.support.annotation.NonNull
 import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.widget.Toast
 import com.google.android.gms.maps.GoogleMap
+import com.google.gson.Gson
 
 
 class MainActivity : AppCompatActivity() {
@@ -53,11 +55,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
+
+        Log.e(requestCode.toString(), Gson().toJson(grantResults))
         if (requestCode == 1) {
-        } else {
-            Toast.makeText(this, "권한이 거절 되었습니다. 앱을 이용하려면 권한을 승낙하여야 합니다.", Toast.LENGTH_SHORT).show()
-            finish()
+            if (grantResults[0] == -1 || grantResults[1] == -1 || grantResults[2] == -1 || grantResults[3] == -1 || grantResults[4] == -1) {
+                Toast.makeText(this, "권한이 거절 되었습니다. 앱을 이용하려면 권한을 승낙하여야 합니다.", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
     }
-
 }
