@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center|top"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.hwd.flower.activity.MainActivity">
 
     <ImageView
         android:layout_marginTop="40dp"
@@ -28,10 +28,10 @@
         android:text="당신의 아름다운 표현을 도와드립니다"/>
 
     <Button
-        android:id="@+id/mainBtn"
+        android:id="@+id/noticationBtn"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="시작하기"
+        android:text="부고알림"
         android:textSize="25sp"
         android:fontFamily="@font/jejumyeongjo_otf"
         android:textColor="@android:color/white"
@@ -41,4 +41,17 @@
         android:background="@drawable/bg_main_btn"
         />
 
+    <Button
+        android:id="@+id/mainOrderingBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="주문하기"
+        android:textSize="25sp"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
+        android:background="@drawable/bg_main_btn"
+        />
 </LinearLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.sunrin.flower">
+    package="com.hwd.flower">
 
     <uses-permission android:name="com.skcc.skpcm.activity.locationapi.maps.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,27 +29,26 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBJx-4mAIlwHFvHG8dZi3Deigca2ETQ3l0" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SendBugoActivity" />
+        <activity android:name=".activity.SendBugoActivity" />
         <activity
-            android:name=".BankActivity"
+            android:name=".activity.BankActivity"
             android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".LocationActivity"
+            android:name=".activity.LocationActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".GoogleMapActivity" />
-        <activity android:name=".PhoneActivity" />
+        <activity android:name=".activity.GoogleMapActivity" />
+        <activity android:name=".activity.PhoneActivity" />
         <activity
-            android:name=".BugoMessageActivity"
+            android:name=".activity.BugoMessageActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".SendActivity">
-        </activity>
+        <activity android:name=".activity.OrderingActivity"></activity>
     </application>
 
 </manifest>
