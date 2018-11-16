@@ -33,11 +33,7 @@ class PhoneActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK,intent)
             finish()
         }
-
     }
-
-
-
 
     fun getList() {
 
@@ -51,7 +47,6 @@ class PhoneActivity : AppCompatActivity() {
         val sortOrder = ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " COLLATE LOCALIZED ASC"
         //조회해서 가져온다
         val contactCursor = managedQuery(uri, projection, null, selectionArgs, sortOrder)
-
         //정보를 담을 array 설정
 
         if (contactCursor.moveToFirst()) {

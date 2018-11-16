@@ -1,57 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
+    android:background="#c0ea3b"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context="com.hwd.flower.activity.MainActivity">
 
     <ImageView
-        android:layout_marginTop="40dp"
-        android:layout_width="220sp"
-        android:layout_height="170sp"
-        android:background="@drawable/applogo"/>
+        android:id="@+id/mainIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/splash_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/mainExplanText"
-        android:gravity="center|top"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:text="당신의 아름다운 표현을 도와드립니다."
+        android:textColor="@android:color/black"
         android:textSize="20sp"
-        android:padding="20dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/jejumyeongjo_otf"
-        android:textColor="#FFFFFF"
-        android:text="당신의 아름다운 표현을 도와드립니다"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainIcon" />
 
-    <Button
-        android:id="@+id/noticationBtn"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="부고알림"
-        android:textSize="25sp"
-        android:fontFamily="@font/jejumyeongjo_otf"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="110dp"
-        android:layout_marginRight="110dp"
+    <LinearLayout
+        android:id="@+id/happyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_main_btn"
-        />
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bugoLaoyut"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainExplanText">
 
-    <Button
-        android:id="@+id/mainOrderingBtn"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="주문하기"
-        android:textSize="25sp"
-        android:fontFamily="@font/jejumyeongjo_otf"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="110dp"
-        android:layout_marginRight="110dp"
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@drawable/congratulate_flower" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:gravity="center"
+            android:text="기쁜소식 \n알리기"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bugoLaoyut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_main_btn"
-        />
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/happyLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainExplanText">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:background="@drawable/basic_flower" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:gravity="center"
+            android:text="부고소식 \n알리기"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/orderLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_main_btn"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/orderLayout2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happyLayout">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@drawable/congratulate_flower" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:text="축화하환 \n주문하기"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orderLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_main_btn"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/orderLayout1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bugoLaoyut">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:background="@drawable/basic_flower" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:text="근조화환 \n주문하기"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/orderLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_main_btn"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/orderLayout4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderLayout1">
+
+
+        <ImageView
+            android:id="@+id/nan_img"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/nan_flower" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/nan_txt"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:text="난"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nan_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nan_img"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:text="주문하기"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/orderLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_main_btn"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/orderLayout3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/flowers" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:text="꽃다발 \n주문하기"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orderLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_main_btn"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderLayout4">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:background="@drawable/miso_flower" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:background="@drawable/miso_flower" />
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:gravity="right"
+            android:text="미소화 \n주문하기"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
 </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>

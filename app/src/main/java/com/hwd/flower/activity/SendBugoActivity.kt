@@ -129,9 +129,10 @@ class SendBugoActivity : AppCompatActivity() {
             intent.putExtra("address", data)
             intent.setPackage(Telephony.Sms.getDefaultSmsPackage(this))
             intent.type = "vnd.android-dir/mms-sms"
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + viewImage()))
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://" + viewImage()))
             intent.type = "image/*"
             startActivity(Intent.createChooser(intent, "보내기$i"))
+            finish()
         }
     }
 

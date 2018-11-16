@@ -13,6 +13,9 @@ import android.util.Log
 import android.widget.Toast
 import com.google.gson.Gson
 import com.hwd.flower.R
+import android.graphics.drawable.GradientDrawable
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,20 +25,53 @@ class MainActivity : AppCompatActivity() {
 
         setPermission()
 
-        mainExplanText.setShadowLayer(50F, 0F, 0F, Color.WHITE)
-        noticationBtn.setShadowLayer(50F, 0F, 0F, Color.WHITE)
-        mainOrderingBtn.setShadowLayer(50F, 0F, 0F, Color.WHITE)
+        val bgShape = happyLayout.getBackground() as GradientDrawable
+        bgShape.setColor(Color.parseColor("#FF9815BF"))
 
-        noticationBtn.setOnClickListener {
-            var intent = Intent(this, SendBugoActivity::class.java)
-            startActivity(intent)
-            finish()
+        val bgShape2 = bugoLaoyut.getBackground() as GradientDrawable
+        bgShape2.setColor(Color.parseColor("#000000"))
+
+        val bgShape3 = orderLayout1.getBackground() as GradientDrawable
+        bgShape3.setColor(Color.parseColor("#FFE87C1B"))
+
+        val bgShape4 = orderLayout2.getBackground() as GradientDrawable
+        bgShape4.setColor(Color.parseColor("#FF4E4E4E"))
+
+        val bgShape5 = orderLayout3.getBackground() as GradientDrawable
+        bgShape5.setColor(Color.parseColor("#FF157F34"))
+
+        val bgShape6 = orderLayout4.getBackground() as GradientDrawable
+        bgShape6.setColor(Color.parseColor("#f2e820"))
+
+        val bgShape7 = orderLayout5.getBackground() as GradientDrawable
+        bgShape7.setColor(Color.parseColor("#FF5EC4F1"))
+
+        happyLayout.setOnClickListener {
+
         }
 
-        mainOrderingBtn.setOnClickListener{
-            var intent = Intent(this, OrderingActivity::class.java)
-            startActivity(intent)
-            finish()
+        bugoLaoyut.setOnClickListener {
+
+        }
+
+        orderLayout1.setOnClickListener {
+
+        }
+
+        orderLayout2.setOnClickListener {
+
+        }
+
+        orderLayout3.setOnClickListener {
+
+        }
+
+        orderLayout4.setOnClickListener {
+
+        }
+
+        orderLayout5.setOnClickListener {
+
         }
     }
 
