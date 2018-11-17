@@ -7,10 +7,12 @@ import com.hwd.flower.R
 import kotlinx.android.synthetic.main.activity_ordering.*
 
 class OrderingActivity : AppCompatActivity() {
-    var link = "http://xn--ig2brfw80b5lbd59a.kr/"
+    var link :String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ordering)
+
+        link = intent.getStringExtra("link")
 
         webView.webViewClient = WebViewClient()
         val setting = webView.settings

@@ -1,12 +1,10 @@
-package com.hwd.flower
+package com.hwd.flower.activity
 
 import android.content.Intent
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.hwd.flower.activity.MainActivity
-import kotlinx.android.synthetic.main.activity_splash.*
+import com.hwd.flower.R
 
 class SplashActivity : AppCompatActivity() {
 
@@ -19,6 +17,6 @@ class SplashActivity : AppCompatActivity() {
         handler.postDelayed({
             startActivity(Intent(this@SplashActivity,MainActivity::class.java))
             finish()
-        },2000)
+        },1500)
     }
 }

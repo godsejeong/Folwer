@@ -29,9 +29,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBJx-4mAIlwHFvHG8dZi3Deigca2ETQ3l0" />
 
-        <activity android:name=".activity.MainActivity">
-
-        </activity>
+        <activity android:name=".activity.MainActivity"></activity>
         <activity android:name=".activity.SendBugoActivity" />
         <activity
             android:name=".activity.BankActivity"
@@ -41,13 +39,14 @@
             android:name=".activity.BugoMessageActivity"
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".activity.OrderingActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.HappynewsActivity"></activity>
     </application>
 
 </manifest>
