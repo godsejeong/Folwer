@@ -14,7 +14,6 @@ class BugoMessageActivity : Activity() {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_bugo_messge)
 
-
         btn1.setOnClickListener {
             var intent = Intent()
             intent.putExtra("message",btn1.text.toString())

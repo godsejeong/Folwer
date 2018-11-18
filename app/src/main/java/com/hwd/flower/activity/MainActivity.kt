@@ -48,11 +48,10 @@ class MainActivity : AppCompatActivity() {
 
         happyLayout.setOnClickListener {
             startActivity(Intent(this,HappynewsActivity::class.java))
-            finish()
         }
 
         bugoLaoyut.setOnClickListener {
-
+            startActivity(Intent(this,SendBugoActivity::class.java))
         }
 
         orderLayout1.setOnClickListener {
@@ -75,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         orderLayout4.setOnClickListener {
             var intent = Intent(this,OrderingActivity::class.java)
-            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=4&middleno=0&smallno=0&kind=normal")
+            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=1&middleno=0&smallno=0&kind=normal")
             startActivity(intent)
         }
         orderLayout5.setOnClickListener {

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_business"
+    tools:context=".activity.BusinessActivity">
+
+
+    <TextView
+        android:id="@+id/businessTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:text="개업 축하 알림"
+        android:textColor="#75563e"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/businessSubLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/businessSubLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/businessLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/businessTitleTv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    <LinearLayout
+        android:id="@+id/businessLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/businessSub1Tv">
+
+        <EditText
+            android:id="@+id/businessTitleMyName"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="#00000000"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:gravity="center"
+            android:hint="홍길동"
+            android:letterSpacing="0.5"
+            android:textColor="@android:color/black"
+            android:textColorHint="#f95b5b" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:text="님의"
+            android:textColor="#75563e"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/businessTitleName"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="#00000000"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:gravity="center"
+            android:hint="개업명"
+            android:letterSpacing="0.5"
+            android:textColor="@android:color/black"
+            android:textColorHint="#f95b5b" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jejumyeongjo_otf"
+            android:text="개업을"
+            android:textColor="#75563e"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/businessSub1Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:text="진심으로 축하드리며"
+        android:textColor="#75563e"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/businessSub2Tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/businessSub2Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:text="내용을 알려드립니다"
+        android:textColor="#75563e"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/businessSub1Tv" />
+
+    </android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/businessLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/businessSub3Tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/businessSubLayout">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/businessWaether"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/bg_business_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="날짜"
+                android:textColor="#75563e"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/businessWaetherEt"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/bg_business_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:hint="날짜를 입력해 주세요"
+                android:letterSpacing="0.2"
+                android:textColor="#75563e"
+                android:textColorHint="#a7a7a7"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/businessAddress"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/bg_business_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="주소"
+                android:textColor="#75563e"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/businessAddressEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/bg_business_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:hint="장례식장 위치를 선택해 주세요"
+                android:letterSpacing="0.2"
+                android:padding="8dp"
+                android:textColor="#75563e"
+                android:textColorHint="#a7a7a7"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/businessAccound"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/bg_business_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="계좌"
+                android:textColor="#75563e"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/businessBank"
+                android:layout_width="46dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/bg_business_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:text="은행"
+                android:textColor="#75563e"></Button>
+
+            <EditText
+                android:id="@+id/businessAccoundEt"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/bg_business_btn"
+                android:fontFamily="@font/jejumyeongjo_otf"
+                android:gravity="center"
+                android:hint="계좌번호를 입력해주세요"
+                android:letterSpacing="0.2"
+                android:textColor="#75563e"
+                android:textColorHint="#a7a7a7"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/businessSub3Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        android:text="화환 주문은 친환결쌀 화환을 이용해주세요"
+        android:textColor="#75563e"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/businessBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/businessLayout2" />
+
+    <Button
+        android:id="@+id/businessBtn"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_business_btn"
+        android:text="발송하기"
+        android:textColor="#75563e"
+        android:textSize="20sp"
+        android:fontFamily="@font/jejumyeongjo_otf"
+        app:layout_constraintBottom_toTopOf="@+id/businessSpace"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/businessSub3Tv" />
+
+    <Space
+        android:id="@+id/businessSpace"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

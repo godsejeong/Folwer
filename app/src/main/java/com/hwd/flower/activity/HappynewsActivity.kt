@@ -1,12 +1,12 @@
 package com.hwd.flower.activity
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.hwd.flower.R
 import kotlinx.android.synthetic.main.activity_happynews.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class HappynewsActivity : AppCompatActivity() {
 
@@ -28,7 +28,7 @@ class HappynewsActivity : AppCompatActivity() {
         }
 
         happyMarriage.setOnClickListener {
-
+            startActivity(Intent(this, MerryActivity::class.java))
         }
 
         happyOpening.setOnClickListener {

@@ -19,6 +19,7 @@ import android.provider.Telephony
 import android.support.annotation.RequiresApi
 import android.widget.Toast
 import com.hwd.flower.R
+import com.hwd.flower.utils.Utils
 
 class SendBugoActivity : AppCompatActivity() {
     var data1: String? = null
@@ -110,7 +111,7 @@ class SendBugoActivity : AppCompatActivity() {
                 bugo3.setBackgroundColor(Color.parseColor("#00000000"))
                 bugo4.setBackgroundColor(Color.parseColor("#00000000"))
 
-                sendMessage()
+                Utils.sendMessage(this@SendBugoActivity,phonelist,window.decorView.rootView)
             }
 
             if(requestCode == 200){
@@ -118,50 +119,6 @@ class SendBugoActivity : AppCompatActivity() {
             }
         }
     }
-
-    @RequiresApi(Build.VERSION_CODES.KITKAT)
-    fun sendMessage() {
-        for (i in 0 until phonelist.size) {
-            var data = phonelist[i]
-
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.putExtra("sms_body", "http://xn--ig2brfw80b5lbd59a.kr/\n근조화환 주문하기")
-            intent.putExtra("address", data)
-            intent.setPackage(Telephony.Sms.getDefaultSmsPackage(this))
-            intent.type = "vnd.android-dir/mms-sms"
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://" + viewImage()))
-            intent.type = "image/*"
-            startActivity(Intent.createChooser(intent, "보내기$i"))
-            finish()
-        }
-    }
-
-    fun viewImage(): String? {
-        var imagePath = "IMG_" + SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-
-        var v  = window.decorView.rootView
-
-        v.buildDrawingCache()
-
-        var captureView = v.getDrawingCache()
-
-        var fos: FileOutputStream
-        var file = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString() + imagePath + ".jpeg")
-
-        var path = file.path
-
-        try {
-            fos = FileOutputStream(file)
-            captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos)
-            fos.close()
-        } catch (e: FileNotFoundException) {
-            e.printStackTrace()
-        }
-        return path
-    }
-
-
-
-    }
+}
 
 

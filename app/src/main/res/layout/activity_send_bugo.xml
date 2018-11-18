@@ -123,7 +123,7 @@
                 android:id="@+id/bugo4"
                 android:layout_width="180dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="3dp"
                 android:background="#00000000"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
@@ -165,7 +165,7 @@
                 android:layout_width="80dp"
                 android:layout_marginLeft="14dp"
                 android:layout_height="30dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:letterSpacing="0.2"
@@ -178,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="2dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:layout_marginRight="14dp"
@@ -201,7 +201,7 @@
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="14dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:letterSpacing="0.2"
@@ -214,7 +214,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="2dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:layout_marginRight="14dp"
@@ -235,7 +235,7 @@
                 android:id="@+id/bugo7"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:letterSpacing="0.2"
@@ -251,7 +251,7 @@
                 android:padding="8dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="14dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:hint="장례식장 위치를 선택해 주세요"
@@ -271,7 +271,7 @@
                 android:id="@+id/bugo8"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:letterSpacing="0.2"
@@ -286,10 +286,9 @@
                 android:text="은행"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:textColor="@android:color/white"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:layout_width="46dp"
                 android:layout_height="30dp">
-
             </Button>
 
             <EditText
@@ -298,7 +297,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="2dp"
-                android:background="@drawable/bg_main_btn"
+                android:background="@drawable/bg_bugo"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
                 android:hint="계좌번호를 입력해주세요"
@@ -308,7 +307,6 @@
                 android:textColorHint="#a7a7a7"
                 android:textSize="15sp" />
         </LinearLayout>
-
     </LinearLayout>
 
 
@@ -333,7 +331,7 @@
         android:id="@+id/bugobtn"
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:background="@drawable/bg_main_btn"
+        android:background="@drawable/bg_bugo"
         android:text="발송하기"
         android:textColor="@android:color/white"
         android:textSize="20sp"
