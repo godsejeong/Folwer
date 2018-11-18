@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hwd.flower">
+    package="com.hod.flower">
 
     <uses-permission android:name="com.skcc.skpcm.activity.locationapi.maps.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,27 +29,27 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBJx-4mAIlwHFvHG8dZi3Deigca2ETQ3l0" />
 
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.SendBugoActivity" />
+        <activity android:name="com.hod.flower.activity.MainActivity" />
+        <activity android:name="com.hod.flower.activity.SendBugoActivity" />
         <activity
-            android:name=".activity.BankActivity"
+            android:name="com.hod.flower.activity.BankActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".activity.PhoneActivity" />
+        <activity android:name="com.hod.flower.activity.PhoneActivity" />
         <activity
-            android:name=".activity.BugoMessageActivity"
+            android:name="com.hod.flower.activity.BugoMessageActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".activity.OrderingActivity" />
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name="com.hod.flower.activity.OrderingActivity" />
+        <activity android:name="com.hod.flower.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.HappynewsActivity" />
-        <activity android:name=".activity.MerryActivity" />
-        <activity android:name=".activity.BusinessActivity" />
-        <activity android:name=".activity.BirthdayActivity"></activity>
+        <activity android:name="com.hod.flower.activity.HappynewsActivity" />
+        <activity android:name="com.hod.flower.activity.MerryActivity" />
+        <activity android:name="com.hod.flower.activity.BusinessActivity" />
+        <activity android:name="com.hod.flower.activity.BirthdayActivity"></activity>
     </application>
 
 </manifest>

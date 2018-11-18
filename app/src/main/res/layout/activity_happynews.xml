@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#c0ea3b"
-    tools:context=".activity.HappynewsActivity">
+    tools:context="com.hod.flower.activity.HappynewsActivity">
 
     <ImageView
         android:id="@+id/happynewsIcon"

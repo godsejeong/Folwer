@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_business"
-    tools:context=".activity.BusinessActivity">
+    tools:context="com.hod.flower.activity.BusinessActivity">
 
 
     <TextView
@@ -128,7 +128,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/businessWaether"
+                android:id="@+id/businessDate"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="14dp"
@@ -141,7 +141,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/businessWaetherEt"
+                android:id="@+id/businessDateEt"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="2dp"

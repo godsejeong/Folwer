@@ -7,7 +7,7 @@
     android:background="#c0ea3b"
     android:gravity="center|top"
     android:orientation="vertical"
-    tools:context="com.hwd.flower.activity.MainActivity">
+    tools:context="com.hwd.flower.com.hod.flower.activity.MainActivity">
 
     <ImageView
         android:id="@+id/mainIcon"

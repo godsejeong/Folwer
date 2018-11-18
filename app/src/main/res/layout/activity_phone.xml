@@ -4,20 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hwd.flower.activity.PhoneActivity">
+    tools:context="com.hod.flower.activity.PhoneActivity">
 
-    <ListView
-        android:id="@+id/phoneList"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </ListView>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/phoneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/phoneBtn"
+                app:layout_constraintRight_toLeftOf="@id/phoneBtn"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/phoneBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검색"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ListView
+            android:id="@+id/phoneList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/phoneLayout"
+            app:layout_constraintTop_toBottomOf="@id/phoneLayout">
+
+        </ListView>
+    </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/phoneFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
         android:layout_margin="10dp"
-        android:src="@drawable/ic_send_black_24dp"
-        android:layout_gravity="right|bottom"/>
+        android:src="@drawable/ic_send_black_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

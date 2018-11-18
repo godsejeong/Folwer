@@ -1,0 +1,38 @@
+package com.hod.flower.activity
+
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import com.hod.flower.R
+import kotlinx.android.synthetic.main.activity_happynews.*
+
+class HappynewsActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_happynews)
+
+        val congratulatebgShape = congratulateLaoyut.background as GradientDrawable
+        congratulatebgShape.setColor(Color.parseColor("#FFE37EAC"))
+
+        val marriagebgShape = marriageLaoyut.background as GradientDrawable
+        marriagebgShape.setColor(Color.parseColor("#FFF2E820"))
+
+        val openingbgShape = openingLaoyut.background as GradientDrawable
+        openingbgShape.setColor(Color.parseColor("#FF5EC4F1"))
+
+        happyCongratulate.setOnClickListener {
+            startActivity(Intent(this, BirthdayActivity::class.java))
+        }
+
+        happyMarriage.setOnClickListener {
+            startActivity(Intent(this, MerryActivity::class.java))
+        }
+
+        happyOpening.setOnClickListener {
+            startActivity(Intent(this, BusinessActivity::class.java))
+        }
+    }
+}
