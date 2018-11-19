@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.Telephony
 import android.support.annotation.RequiresApi
+import android.support.v4.content.FileProvider
 import android.view.View
 import java.io.File
 import java.io.FileNotFoundException
@@ -28,14 +29,14 @@ object Utils{
             intent.putExtra("address", data)
             intent.setPackage(Telephony.Sms.getDefaultSmsPackage(context))
             intent.type = "vnd.android-dir/mms-sms"
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://" + viewImage(v)))
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse(viewImage(v,context)))
             intent.type = "image/*"
             context.startActivity(Intent.createChooser(intent, "보내기$i"))
             context.finish()
         }
     }
 
-    fun viewImage(v : View): String? {
+    fun viewImage(v : View,context: Context): String? {
         var imagePath = "IMG_" + SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
 
 

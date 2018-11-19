@@ -219,7 +219,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/nan_flower" />
+                    android:background="@drawable/flowers" />
             </LinearLayout>
 
 
@@ -230,7 +230,6 @@
                 android:text="꽃다발 \n주문하기"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="20sp" />
-
         </LinearLayout>
 
         <LinearLayout

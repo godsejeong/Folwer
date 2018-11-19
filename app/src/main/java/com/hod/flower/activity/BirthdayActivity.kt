@@ -29,12 +29,12 @@ class BirthdayActivity : AppCompatActivity() {
             var Accound = birthdayAccoundEt.text.toString()
             var Address = birthdayAddressEt.text.toString()
 
-            if(Name.isNotEmpty() && Count.isNotEmpty() && Date.isNotEmpty()
-                    && Bank.isNotEmpty() && Accound.isNotEmpty() && Address.isNotEmpty()){
+//            if(Name.isNotEmpty() && Count.isNotEmpty() && Date.isNotEmpty()
+//                    && Bank.isNotEmpty() && Accound.isNotEmpty() && Address.isNotEmpty()){
                 startActivityForResult(Intent(this, PhoneActivity::class.java), 10)
-            }else {
-                Toast.makeText(this, "모든 데이터를 기입해주세요", Toast.LENGTH_SHORT).show()
-            }
+//            }else {
+//                Toast.makeText(this, "모든 데이터를 기입해주세요", Toast.LENGTH_SHORT).show()
+//            }
 
         }
 

@@ -33,13 +33,13 @@ class BusinessActivity : AppCompatActivity() {
             var BusinessName = businessTitleName.text.toString()
             var Date = businessDateEt.text.toString()
 
-            if(Account.isNotEmpty() && Address.isNotEmpty()
-                    && Bank.isNotEmpty() && MyName.isNotEmpty()
-                    && BusinessName.isNotEmpty() && Date.isNotEmpty()){
+//            if(Account.isNotEmpty() && Address.isNotEmpty()
+//                    && Bank.isNotEmpty() && MyName.isNotEmpty()
+//                    && BusinessName.isNotEmpty() && Date.isNotEmpty()){
                 startActivityForResult(Intent(this, PhoneActivity::class.java), 10)
-            }else {
-                Toast.makeText(this, "모든 데이터를 기입해주세요", Toast.LENGTH_SHORT).show()
-            }
+//            }else {
+//                Toast.makeText(this, "모든 데이터를 기입해주세요", Toast.LENGTH_SHORT).show()
+//            }
 
         }
 

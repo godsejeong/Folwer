@@ -18,6 +18,8 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_app"
         android:label="@string/app_name"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -50,6 +52,17 @@
         <activity android:name="com.hod.flower.activity.MerryActivity" />
         <activity android:name="com.hod.flower.activity.BusinessActivity" />
         <activity android:name="com.hod.flower.activity.BirthdayActivity"></activity>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hod.flower.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"></meta-data>
+        </provider>
     </application>
 
 </manifest>

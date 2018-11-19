@@ -22,23 +22,8 @@ class MerryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_merry)
 
         merryBtn.setOnClickListener {
-            var Accound = merryAccoundEt.text.toString()
-            var Bank = merryBank.text.toString()
-            var Address = merryAddressEt.text.toString()
-            var Bride = merryBrideEd.text.toString()//신부
-            var Groom = merryGroomEt.text.toString()//신랑
-            var TitleGroom = merryTitleGroom.text.toString()
-            var TitleBride = merryTitleBride.text.toString()
-
-            if(Accound.isNotEmpty() && Bank.isNotEmpty()
-                    && Address.isNotEmpty() && Bride.isNotEmpty()
-                    && Groom.isNotEmpty() && TitleGroom.isNotEmpty()
-                    && TitleBride.isNotEmpty()){
-                startActivityForResult(Intent(this, PhoneActivity::class.java), 10)
-            }else{
-            Toast.makeText(this,"모든 데이터를 기입해주세요", Toast.LENGTH_SHORT).show()
+            startActivityForResult(Intent(this, PhoneActivity::class.java), 10)
         }
-    }
 
         merryBank.setOnClickListener {
             var intent = Intent(this, BankActivity::class.java)

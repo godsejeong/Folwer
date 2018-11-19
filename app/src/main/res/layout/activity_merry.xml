@@ -210,7 +210,7 @@
                 android:background="@drawable/bg_merry_btn"
                 android:fontFamily="@font/jejumyeongjo_otf"
                 android:gravity="center"
-                android:hint="장례식장 위치를 선택해 주세요"
+                android:hint="위치를 선택해 주세요"
                 android:letterSpacing="0.2"
                 android:padding="8dp"
                 android:textColor="@android:color/black"
