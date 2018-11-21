@@ -34,8 +34,8 @@
 
         <EditText
             android:id="@+id/birthdayName"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#00000000"
             android:fontFamily="@font/jejumyeongjo_otf"
             android:gravity="center"
@@ -47,8 +47,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:fontFamily="@font/jejumyeongjo_otf"
             android:text="님의"
             android:textColor="#ea535a"
@@ -56,8 +56,8 @@
 
         <EditText
             android:id="@+id/birthdayCount"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#00000000"
             android:fontFamily="@font/jejumyeongjo_otf"
             android:gravity="center"
@@ -70,6 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/jejumyeongjo_otf"
+            android:layout_marginLeft="15dp"
             android:text="번째 생일을"
             android:textColor="#ea535a"
             android:textSize="20sp" />
@@ -236,7 +237,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jejumyeongjo_otf"
-        android:text="화환 주문은 친환결쌀 화환을 이용해주세요"
+        android:text="화환 주문은 친환경 쌀화환을 이용해주세요"
         android:textColor="#ea535a"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/birthdayBtn"

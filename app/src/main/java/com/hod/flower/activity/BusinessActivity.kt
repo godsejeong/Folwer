@@ -8,6 +8,10 @@ import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
+import android.util.TypedValue
 import android.view.View
 import android.widget.Toast
 import com.hod.flower.R
@@ -24,6 +28,25 @@ class BusinessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_business)
 
+
+        businessTitleName.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                var startsize = 15F
+                if(s.length >= 5){
+                    var size = s.length - 4
+                    businessTitleName.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (startsize - size))
+                }else{
+                    businessTitleName.setTextSize(TypedValue.COMPLEX_UNIT_DIP,startsize)
+                }
+                Log.e("testset", businessTitleName.textSize.toString())
+            }
+        })
 
         businessBtn.setOnClickListener {
             var Account = businessAccoundEt.text.toString()
@@ -62,7 +85,7 @@ class BusinessActivity : AppCompatActivity() {
             if (requestCode == 10) {
                 businessBtn.visibility = View.INVISIBLE
                 phonelist = data!!.getStringArrayListExtra("list")
-                Utils.sendMessage(this@BusinessActivity,phonelist,window.decorView.rootView)
+                Utils.sendMessage(this@BusinessActivity,phonelist,window.decorView.rootView,false)
             }
         }
     }

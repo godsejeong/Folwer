@@ -44,7 +44,7 @@ class MerryActivity : AppCompatActivity() {
             if (requestCode == 10) {
                 merryBtn.visibility = View.INVISIBLE
                 phonelist = data!!.getStringArrayListExtra("list")
-                Utils.sendMessage(this@MerryActivity,phonelist,window.decorView.rootView)
+                Utils.sendMessage(this@MerryActivity,phonelist,window.decorView.rootView,false)
             }
         }
     }

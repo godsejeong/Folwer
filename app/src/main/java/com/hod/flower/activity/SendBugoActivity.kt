@@ -69,19 +69,14 @@ class SendBugoActivity : AppCompatActivity() {
 
             datament = bugoment.text.toString()
 
-            if(datament == "문구를 선택해 주세요"){
-                Toast.makeText(this,"문구를 선택하지 않았습니다. 문구를 선택해 주세요",Toast.LENGTH_SHORT).show()
-            }
 
 
-            if(data1!!.isNotEmpty() && data2!!.isNotEmpty() && data3!!.isNotEmpty()
-                && data4!!.isNotEmpty() && data5!!.isNotEmpty() && data6!!.isNotEmpty()
-                && data7!!.isNotEmpty() && datament != "문구를 선택해 주세요"){
 
-            startActivityForResult(Intent(this, PhoneActivity::class.java), 10)
+            if(datament != "문구를 선택해 주세요"){
+                startActivityForResult(Intent(this, PhoneActivity::class.java), 10)
 
             }else{
-                Toast.makeText(this,"모든 데이터를 기입해주세요",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"문구를 선택하지 않았습니다. 문구를 선택해 주세요",Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -111,7 +106,7 @@ class SendBugoActivity : AppCompatActivity() {
                 bugo3.setBackgroundColor(Color.parseColor("#00000000"))
                 bugo4.setBackgroundColor(Color.parseColor("#00000000"))
 
-                Utils.sendMessage(this@SendBugoActivity,phonelist,window.decorView.rootView)
+                Utils.sendMessage(this@SendBugoActivity,phonelist,window.decorView.rootView,true)
             }
 
             if(requestCode == 200){

@@ -57,7 +57,7 @@ class BirthdayActivity : AppCompatActivity() {
             if (requestCode == 10) {
                 birthdayBtn.visibility = View.INVISIBLE
                 phonelist = data!!.getStringArrayListExtra("list")
-                Utils.sendMessage(this@BirthdayActivity,phonelist,window.decorView.rootView)
+                Utils.sendMessage(this@BirthdayActivity,phonelist,window.decorView.rootView,false)
             }
         }
     }

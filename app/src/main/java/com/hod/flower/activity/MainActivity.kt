@@ -14,8 +14,7 @@ import android.widget.Toast
 import com.google.gson.Gson
 import com.hod.flower.R
 import android.graphics.drawable.GradientDrawable
-
-
+import kotlinx.android.synthetic.main.activity_send_bugo.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         val bgShape = happyLayout.background as GradientDrawable
         bgShape.setColor(Color.parseColor("#FF9815BF"))
+
+//        happyLayout.setSh(50F, 0F, 0F, Color.WHITE)
 
         val bgShape2 = bugoLaoyut.background as GradientDrawable
         bgShape2.setColor(Color.parseColor("#000000"))

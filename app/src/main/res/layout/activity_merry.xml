@@ -34,8 +34,8 @@
 
         <EditText
             android:id="@+id/merryTitleGroom"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#00000000"
             android:fontFamily="@font/jejumyeongjo_otf"
             android:gravity="center"
@@ -47,8 +47,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:fontFamily="@font/jejumyeongjo_otf"
             android:text="군과"
             android:textColor="@android:color/black"
@@ -56,8 +56,8 @@
 
         <EditText
             android:id="@+id/merryTitleBride"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#00000000"
             android:fontFamily="@font/jejumyeongjo_otf"
             android:gravity="center"
@@ -71,6 +71,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/jejumyeongjo_otf"
             android:text="양의 결혼을"
+            android:layout_marginLeft="15dp"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
@@ -271,7 +272,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jejumyeongjo_otf"
-        android:text="화환 주문은 친환결쌀 화환을 이용해주세요"
+        android:text="화환 주문은 친환경 쌀화환을 이용해주세요"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/merryBtn"
