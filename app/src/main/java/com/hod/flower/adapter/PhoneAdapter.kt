@@ -14,10 +14,21 @@ import com.hod.flower.R
 class PhoneAdapter(items: ArrayList<PhoneData>) : BaseAdapter() {
     var mArrayList = ArrayList<String>()
     var items = items
-
+//
+//    fun getcheck(phone : String) : Boolean? {
+//        Log.e("adpater","test")
+//        (0 until items.size).forEach {
+//            if(items[it].phone==phone){
+//                return items[it].bl
+//            }
+//        }
+//
+//        return false
+//    }
 
     fun addCheck(selectdata: Int) {
         mArrayList.add(items[selectdata].phone)
+        Log.e("add",Gson().toJson(mArrayList))
     }
 
     fun deleteCheck(selectdata: Int) {
@@ -45,14 +56,27 @@ class PhoneAdapter(items: ArrayList<PhoneData>) : BaseAdapter() {
 
         view.phoneItemName.text = data.name
         view.phoneItemPhone.text = data.phone
+        view.phoneCb.isChecked = data.bl!!
+
+        try {
+            (0..mArrayList.size).forEach {
+                if (data.phone == mArrayList[it]) {
+                    view.phoneCb.isChecked = true
+                    data.bl = true
+                }
+            }
+        }catch (e : IndexOutOfBoundsException){
+            Log.e("phone","nottrue")
+        }
 
         view.phoneCb.setOnClickListener {
             if (view.phoneCb.isChecked) {
                 addCheck(position)
+                data.bl = true
             } else {
                 deleteCheck(position)
+                data.bl = false
             }
-
         }
             return view
         }

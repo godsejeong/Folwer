@@ -14,6 +14,7 @@ import android.widget.Toast
 import com.google.gson.Gson
 import com.hod.flower.R
 import android.graphics.drawable.GradientDrawable
+import android.net.Uri
 import kotlinx.android.synthetic.main.activity_send_bugo.*
 
 
@@ -56,31 +57,49 @@ class MainActivity : AppCompatActivity() {
         }
 
         orderLayout1.setOnClickListener {
-            var intent = Intent(this, OrderingActivity::class.java)
-            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=7&middleno=0&smallno=0&kind=normal")
+//            var intent = Intent(this, OrderingActivity::class.java)
+            val uri = Uri.parse("http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=1&middleno=0&smallno=0&kind=normal")
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+//            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=7&middleno=0&smallno=0&kind=normal")
             startActivity(intent)
         }
 
         orderLayout2.setOnClickListener {
-            var intent = Intent(this, OrderingActivity::class.java)
-            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=8&middleno=0&smallno=0&kind=normal")
+//            var intent = Intent(this, OrderingActivity::class.java)
+            val uri = Uri.parse("http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=8&middleno=0&smallno=0&kind=normal")
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+//            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=8&middleno=0&smallno=0&kind=normal")
             startActivity(intent)
         }
 
         orderLayout3.setOnClickListener {
-            var intent = Intent(this, OrderingActivity::class.java)
-            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=4&middleno=0&smallno=0&kind=normal")
+//            var intent = Intent(this, OrderingActivity::class.java)
+            val uri = Uri.parse("http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=4&middleno=0&smallno=0&kind=normal")
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+//            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=4&middleno=0&smallno=0&kind=normal")
             startActivity(intent)
         }
 
         orderLayout4.setOnClickListener {
-            var intent = Intent(this, OrderingActivity::class.java)
-            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=1&middleno=0&smallno=0&kind=normal")
+//            var intent = Intent(this, OrderingActivity::class.java)
+
+            val uri = Uri.parse("http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=1&middleno=0&smallno=0&kind=normal")
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+
+//            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsList.php?largeno=1&middleno=0&smallno=0&kind=normal")
             startActivity(intent)
         }
         orderLayout5.setOnClickListener {
-            var intent = Intent(this, OrderingActivity::class.java)
-            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsDetail.php?code=8c0a15d4be&kind=normal&largeno=8&middleno=0&smallno=0")
+//            var intent = Intent(this, OrderingActivity::class.java)
+//            intent.putExtra("link","http://naver.com")
+            val uri = Uri.parse("http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsDetail.php?code=8c0a15d4be&kind=normal&largeno=8&middleno=0&smallno=0")
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+//            intent.putExtra("link","http://xn--ig2brfw80b5lbd59a.kr/shopuser/mobile/goods/goodsDetail.php?code=8c0a15d4be&kind=normal&largeno=8&middleno=0&smallno=0")
             startActivity(intent)
         }
     }

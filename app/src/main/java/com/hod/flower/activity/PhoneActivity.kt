@@ -14,15 +14,20 @@ import com.hod.flower.adapter.PhoneAdapter
 import com.hod.flower.data.PhoneData
 import com.hod.flower.R
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class PhoneActivity : AppCompatActivity() {
     lateinit var adapter: PhoneAdapter
     var item = ArrayList<PhoneData>()
+    var searchitem = ArrayList<PhoneData>()
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone)
+
+        adapter = PhoneAdapter(item)
+        phoneList.adapter = adapter
 
         getList()
 
@@ -51,7 +56,7 @@ class PhoneActivity : AppCompatActivity() {
         val projection = arrayOf(ContactsContract.CommonDataKinds.Phone.NUMBER, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME)
 
         val selectionArgs: Array<String>? = null
-
+        var check : Boolean? = null
         //정렬
         val sortOrder = ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " COLLATE LOCALIZED ASC"
         //조회해서 가져온다
@@ -62,19 +67,18 @@ class PhoneActivity : AppCompatActivity() {
             do {
                 Log.e("1", contactCursor.getString(1))
                 Log.e("2", contactCursor.getString(0))
-                item.add(PhoneData(contactCursor.getString(1), contactCursor.getString(0)))
+//                check = adapter.getcheck(contactCursor.getString(0))
+                item.add(PhoneData(contactCursor.getString(1), contactCursor.getString(0),false))
 
             } while (contactCursor.moveToNext())
         }
-
-        adapter = PhoneAdapter(item)
-        phoneList.adapter = adapter
+        adapter.notifyDataSetChanged()
     }
 
     fun getsearchList(searchtext : String) {
         item.clear()
         val uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI
-
+        var check : Boolean? = null
         val projection = arrayOf(ContactsContract.CommonDataKinds.Phone.NUMBER, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME)
 
         val selectionArgs: Array<String>? = null
@@ -89,17 +93,16 @@ class PhoneActivity : AppCompatActivity() {
             do {
                 Log.e("1", contactCursor.getString(1))
                 Log.e("2", contactCursor.getString(0))
-
                 Log.e("3", searchtext)
                 if (contactCursor.getString(1).contains(searchtext)) {
-                    item.add(PhoneData(contactCursor.getString(1), contactCursor.getString(0)))
+//                    check = adapter.getcheck(contactCursor.getString(0))
+                    item.add(PhoneData(contactCursor.getString(1),contactCursor.getString(0),false))
                 }else if(contactCursor.getString(0).contains(searchtext)) {
-                    item.add(PhoneData(contactCursor.getString(1), contactCursor.getString(0)))
+//                    check = adapter.getcheck(contactCursor.getString(0))
+                    item.add(PhoneData(contactCursor.getString(1), contactCursor.getString(0),false))
                 }
             } while (contactCursor.moveToNext())
         }
-
-        adapter = PhoneAdapter(item)
-        phoneList.adapter = adapter
+        adapter.notifyDataSetChanged()
     }
 }
